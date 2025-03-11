@@ -6,6 +6,72 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="kalkulator">
+<input type="text" id="output" disabled>
+<div class="buttons">
     
+    <button onclick="perhitungan('1')">
+        1
+    </button>
+    <button onclick="perhitungan('2')">
+        2
+    </button>
+    <button onclick="perhitungan('3')">
+        3
+    </button>
+    <button onclick="perhitungan('4')">
+        4
+    </button>
+    <button onclick="perhitungan('5')">
+        5
+    </button>
+    <button onclick="perhitungan('6')">
+        6
+    </button>
+    <button onclick="perhitungan('7')">
+        7
+    </button>
+    <button onclick="perhitungan('8')">
+        8
+    </button>
+    <button onclick="perhitungan('9')">
+        9
+    </button>
+    <button onclick="perhitungan('*')">
+        x
+    </button>
+    <button onclick="perhitungan('+')">
+        +
+    </button>
+    <button onclick="perhitungan('-')">
+        -
+    </button>
+    <button onclick="perhitungan('/')">
+        :
+    </button>
+    <button onclick="display()">
+        =
+    </button>
+    <button onclick="penghapusan()">
+        c
+    </button>
+</div>
+</div>
+    <script>
+        function perhitungan(value){
+            document.getElementById('output').value+=value;
+        }
+        function penghapusan(){
+            document.getElementById('output').value=''
+        }
+        function display(){
+            const output = document.getElementById('output').value;
+            try{
+                document.getElementById('output').value=eval(output);
+            }catch (e) {
+                document.getElementById('output').value='Error';
+            }
+        }
+    </script>
 </body>
 </html>
